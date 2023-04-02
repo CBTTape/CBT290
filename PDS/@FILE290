@@ -1,0 +1,43 @@
+//***FILE 290 IS THE SOURCE AND DOCUMENTATION FOR GPSAM FROM        *   FILE 290
+//*           THE YALE COMPUTER CENTER WRITTEN BY MR HOWARD         *   FILE 290
+//*           GILBERT.  THIS FILE IS IN IEBUPDTE SYSIN FORMAT.      *   FILE 290
+//*                                                                 *   FILE 290
+//*           GPSAM LETS YOU WRITE YOUR OWN "ACCESS METHOD" AND     *   FILE 290
+//*           MAKES IT LOOK LIKE A SEQUENTIAL DATASET TO ANY        *   FILE 290
+//*           APPLICATION PROGRAM OR UTILITY.  IT CAN BE USED TO    *   FILE 290
+//*           PROVIDE DBMS, VTAM, TSO FULLSCREEN, BTAM, OR          *   FILE 290
+//*           SPECIALIZED DEVICE SUPPORT.                           *   FILE 290
+//*                                                                 *   FILE 290
+//*           SIMPLE:  INSTALLS ON ANY MVS SYSTEM.  NO IBM CODE     *   FILE 290
+//*           IS MODIFIED.  TAKES ONLY A FEW MINUTES TO RUN         *   FILE 290
+//*           LINKEDIT STEPS AND BUILD PROCEDURES.                  *   FILE 290
+//*                                                                 *   FILE 290
+//*           SMALL:  700 BYTES IN LPA.  160 BYTES IN PRIVATE       *   FILE 290
+//*           ADDRESS SPACE.                                        *   FILE 290
+//*                                                                 *   FILE 290
+//*           SAFE:  ONLY ONE INSTRUCTION EXECUTES IN KEY 0 AND     *   FILE 290
+//*           MODIFIES A GENERAL SYSTEM CONTROL BLOCK.  ANOTHER     *   FILE 290
+//*           18 INSTRUCTIONS OPERATE IN A SYSTEM KEY AND ONLY 4    *   FILE 290
+//*           OF THEM CHANGE STORAGE, STORING VALUES IN JOB         *   FILE 290
+//*           RELATED CONTROL BLOCKS IN THE PRIVATE AREA.  EVEN     *   FILE 290
+//*           THE MOST CONSERVATIVE INSTALLATION CAN DESK CHECK     *   FILE 290
+//*           THE SINGLE AUTHORIZED CSECT SEVERAL TIMES OVER IN     *   FILE 290
+//*           AN HOUR.                                              *   FILE 290
+//*                                                                 *   FILE 290
+//*           UNIVERSAL:  WHILE A SYSTEM PROGRAMMER MUST INSTALL    *   FILE 290
+//*           THE PACKAGE IN AUTHORIZED LIBRARIES, ANY              *   FILE 290
+//*           APPLICATION PROGRAMMER CAN WRITE HIS OWN "ACCESS      *   FILE 290
+//*           METHOD" IN ASSEMBLER AND USE IT FROM HIS OWN          *   FILE 290
+//*           PROGRAMS.  THE USER SPECIFIES THE MODULE NAME ON      *   FILE 290
+//*           HIS DD CARD OR IN THE TSO ALLOCATION OF THE           *   FILE 290
+//*           DDNAME.  THESE USER MODULES RUN IN PROBLEM STATE      *   FILE 290
+//*           AND CAN COME FROM ANY LIBRARY.  CONTROL IS GIVEN      *   FILE 290
+//*           TO THE ROUTINE FROM THE OPEN, CLOSE, GET, PUT,        *   FILE 290
+//*           READ, OR WRITE STATEMENTS.                            *   FILE 290
+//*                                                                 *   FILE 290
+//*           SECURE:  MVS INTEGRITY IS MAINTAINED.  IF AN          *   FILE 290
+//*           AUTHORIZED PROGRAM OPENS A GPSAM FILE, THE "ACCESS    *   FILE 290
+//*           METHOD" MODULE IS LIMITED TO THOSE EXPLICITLY         *   FILE 290
+//*           PERMITTED BY AN INSTALLATION SUPPLIED NAME TABLE      *   FILE 290
+//*           AND THE MODULE MUST COME FROM AN APF LIBRARY.         *   FILE 290
+//*                                                                 *   FILE 290
